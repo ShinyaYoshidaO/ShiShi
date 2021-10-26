@@ -1,0 +1,15 @@
+<mat-form-field class="filtering-select-box">
+  <mat-label>搭乗者数</mat-label>
+  <mat-select (closed)="initSelectBox()" [(ngModel)]="selectedVal" (ngOnChanges)="ngOnChanges()">
+    <mat-optgroup>
+      <mat-option *ngFor="let option of displaySelectBoxOptions" [value]="option.value">
+        {{option.text}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+
+<ul *ngFor="let num of boardings">
+  <li><input type="text"><input type="text"></li>
+  <li><input type="text"></li>
+</ul>
